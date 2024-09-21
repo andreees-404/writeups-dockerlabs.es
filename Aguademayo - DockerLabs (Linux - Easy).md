@@ -43,7 +43,7 @@ ping -c1 aguademayo.local
 Haremos un primer escaneo por el protocolo TCP para descubrir si la máquina tiene puertos abiertos, lo haremos con `nmap` empleando el siguiente comando
 
 ~~~ bash
-nmap --open -p- --min-rate 5000 -n -sS -v -Pn $ip -oG allPorts
+nmap --open -p- --min-rate 5000 -n -sS -v -Pn aguademayo.local -oG allPorts
 ~~~
 
 ![first_nmap_scan](https://github.com/user-attachments/assets/eeca9c92-c8fe-4930-96d0-bb5388ecfd46)
