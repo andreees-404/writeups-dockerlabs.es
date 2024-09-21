@@ -55,6 +55,7 @@ nmap --open -p- --min-rate 5000 -n -sS -v -Pn $ip -oG allPorts
 - `-Pn`: Deshabilitar el descubrimiento de host, o sea, asume que el objetivo se encuentra activo, por lo que no hace un `ping` previo a `aguademayo.local`
 - `-v`: Modo `verbose`, muestra los resultados del escaneo en tiempo real
 - `-oG`: Exportar el escaneo a un formato `Grepable`, lo que es más útil a la hora de extraer información de nuestro archivo, como por ejemplo, los puertos abiertos encontrados
+- `--min-rate 5000`: Enviar mínimo 5000 paquetes por segundo
 
 ### Services Scan
 
@@ -64,6 +65,9 @@ nmap -sVC -p 22,80 aguademayo.local -oN targeted
 
 ![ports_scan](https://github.com/user-attachments/assets/ef3499c3-2ee6-468b-9caf-7a2606f57803)
 
+- `-sV`: Detectar la versión del servicio que se está ejecutando
+- `-sC`: Emplear scripts básicos de reconocimiento
+- `-oN`: Exportar a formato nmap (igual que en consola)
 
 ## Http Service
 
